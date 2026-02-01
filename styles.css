@@ -3127,5 +3127,10 @@ html.force--consent.show--consent body {
     margin-top: 1.625em;
   }
 }
+.section--product h5 {
+    font-size: 3rem;   /* Adjust size here */
+    font-weight: 600;  /* Optional: slightly bold but not too heavy */
+   
+}
 
 /*# sourceMappingURL=style.css.map */
