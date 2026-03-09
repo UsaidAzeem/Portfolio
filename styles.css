@@ -3119,4 +3119,569 @@ html.force--consent.show--consent body {
    
 }
 
+/*===========================================
+   NEW VISUAL IMPROVEMENTS
+===========================================*/
+
+/* ---- Mobile Fixes ---- */
+@media only screen and (max-width: 767px) {
+  .section {
+    padding: 0 0.75rem;
+    margin-bottom: 4rem;
+  }
+  
+  .section .columns {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .section .columns .column {
+    grid-column: span 12 !important;
+    margin: 0 !important;
+    padding: 0 0.5rem;
+  }
+  
+  .section .heading {
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+  
+  .section .heading .index {
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .section .heading h2 {
+    font-size: 1.5rem;
+  }
+  
+  p, ul, ol {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .section--intro h1 {
+    font-size: 1.8rem;
+    top: 40%;
+    width: 90%;
+  }
+  
+  header {
+    padding: 0.75rem;
+  }
+  
+  footer {
+    padding: 0.5rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .section--product .columns .column {
+    margin-bottom: 1.5rem;
+  }
+  
+  .section--contact .columns {
+    grid-template-columns: 1fr;
+  }
+  
+  .section--contact .columns .column {
+    grid-column: span 1 !important;
+    margin-bottom: 1rem;
+  }
+}
+
+/* ---- Animated Background Pattern ---- */
+.bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.bg-pattern::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(165, 165, 165, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(165, 165, 165, 0.02) 0%, transparent 40%),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 100px,
+      rgba(165, 165, 165, 0.01) 100px,
+      rgba(165, 165, 165, 0.01) 101px
+    );
+  animation: bgFloat 30s ease-in-out infinite;
+}
+
+@keyframes bgFloat {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-2%, 2%) rotate(1deg); }
+}
+
+/* ---- Floating Geometric Shapes ---- */
+.geo-shape {
+  position: absolute;
+  border: 1px solid rgba(165, 165, 165, 0.15);
+  animation: geoFloat 20s ease-in-out infinite;
+}
+
+.geo-shape.circle {
+  border-radius: 50%;
+}
+
+.geo-shape.square {
+  transform: rotate(45deg);
+}
+
+@keyframes geoFloat {
+  0%, 100% { 
+    transform: translateY(0) rotate(0deg); 
+    opacity: 0.1;
+  }
+  50% { 
+    transform: translateY(-30px) rotate(180deg); 
+    opacity: 0.25;
+  }
+}
+
+/* ---- Project Cards ---- */
+.project-card {
+  position: relative;
+  padding: 1.5rem;
+  border: 1px solid rgba(165, 165, 165, 0.2);
+  margin-bottom: 1.5rem;
+  transition: all 0.4s var(--ease-out);
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 0;
+  background: var(--foreground);
+  transition: height 0.4s var(--ease-out);
+}
+
+.project-card:hover {
+  border-color: rgba(165, 165, 165, 0.4);
+  transform: translateX(5px);
+}
+
+.project-card:hover::before {
+  height: 100%;
+}
+
+.project-card h5 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+
+.project-card h5::after {
+  content: ' →';
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s var(--ease-out);
+}
+
+.project-card:hover h5::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.project-card p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+.project-card .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.project-card .tag {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid rgba(165, 165, 165, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ---- Skills/Tech Visualization ---- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid rgba(165, 165, 165, 0.15);
+  transition: all 0.3s var(--ease-out);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--foreground);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease-out);
+}
+
+.skill-item:hover {
+  border-color: rgba(165, 165, 165, 0.4);
+  transform: translateY(-3px);
+}
+
+.skill-item:hover::after {
+  transform: scaleX(1);
+}
+
+.skill-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-name {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+/* ---- Timeline for Education ---- */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  margin-top: 1.5rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(165, 165, 165, 0.3);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 0.3rem;
+  width: 9px;
+  height: 9px;
+  background: var(--background);
+  border: 1px solid var(--foreground);
+  transform: rotate(45deg);
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-year {
+  font-size: 0.75rem;
+  color: var(--foreground);
+  opacity: 0.6;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-title {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-desc {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+/* ---- Section Visual Divider ---- */
+.section-divider {
+  position: relative;
+  height: 1px;
+  background: rgba(165, 165, 165, 0.2);
+  margin: 3rem 0;
+  overflow: visible;
+}
+
+.section-divider::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background: var(--background);
+  border: 1px solid var(--foreground);
+  transform-origin: center;
+}
+
+.section-divider::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 4px;
+  height: 4px;
+  background: var(--foreground);
+}
+
+/* ---- Stats Counter ---- */
+.stats-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border: 1px solid rgba(165, 165, 165, 0.15);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 1;
+  display: block;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+  margin-top: 0.25rem;
+}
+
+/* ---- ASCII Art Decoration ---- */
+.ascii-deco {
+  font-family: var(--font);
+  font-size: 0.6rem;
+  line-height: 1;
+  opacity: 0.15;
+  white-space: pre;
+  position: absolute;
+  pointer-events: none;
+}
+
+.ascii-deco.top-right {
+  top: 1rem;
+  right: 1rem;
+}
+
+.ascii-deco.bottom-left {
+  bottom: 1rem;
+  left: 1rem;
+}
+
+/* ---- Section Number Highlight ---- */
+.section-number {
+  font-size: clamp(4rem, 15vw, 8rem);
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 1;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section .heading {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Scroll Progress Indicator ---- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--foreground);
+  z-index: 200;
+  transition: width 0.1s linear;
+}
+
+/* ---- Mobile Menu Button ---- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+}
+
+.menu-toggle span {
+  width: 20px;
+  height: 1px;
+  background: var(--foreground);
+  transition: all 0.3s var(--ease-out);
+}
+
+@media only screen and (max-width: 767px) {
+  .menu-toggle {
+    display: flex;
+  }
+  
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--background);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s var(--ease-out);
+  }
+  
+  nav.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  nav a {
+    font-size: 1.5rem;
+  }
+}
+
+/* ---- Intro Stats Display ---- */
+.intro-stats {
+  position: absolute;
+  bottom: 15%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.intro-stat {
+  text-align: center;
+}
+
+.intro-stat-number {
+  font-size: 1.5rem;
+  display: block;
+}
+
+.intro-stat-label {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  opacity: 0.5;
+}
+
+@media only screen and (max-width: 767px) {
+  .intro-stats {
+    gap: 1.5rem;
+    bottom: 10%;
+  }
+  
+  .intro-stat-number {
+    font-size: 1.2rem;
+  }
+}
+
+/* ---- Link Card (for projects) ---- */
+.link-card {
+  display: block;
+  padding: 1rem 1.5rem;
+  border-left: 2px solid rgba(165, 165, 165, 0.3);
+  margin: 1rem 0;
+  transition: all 0.3s var(--ease-out);
+}
+
+.link-card:hover {
+  border-left-color: var(--foreground);
+  padding-left: 2rem;
+}
+
+.link-card .link-title {
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.link-card .link-url {
+  font-size: 0.7rem;
+  opacity: 0.5;
+  word-break: break-all;
+}
+
 /*# sourceMappingURL=style.css.map */
+
+/* ---- Highlighted Words ---- */
+.highlight-red {
+  color: #e63946;
+}
+
+.highlight-blue {
+  color: #457b9d;
+}
+
+.highlight-green {
+  color: #2a9d8f;
+}
+
+.highlight-gold {
+  color: #e9c46a;
+}
+
+.highlight-purple {
+  color: #9b5de5;
+}
+
+/*----*/
