@@ -21025,7 +21025,7 @@
             generateCube(t, e, n) {
                 let i = (this.noise(e * this.freqX, this.noiseZ * this.freqZ) + 1) / 2 * this.cubeHeight;
                 ((e + 1) % 4 == 0 || (n + 1) % 4 == 0) && (i = 0);
-                const r = new bu(1, i, 1),
+                const r = new bu(.8, i, 4),
                     s = new zh({
                         color: 0,
                         wireframe: !1
@@ -21034,7 +21034,7 @@
                 a.position.set(e, i / 2, 0), a.scale.set(.998, .998, .998), t.add(a);
                 const o = new Of(r),
                     l = new xf({
-                        color: 16777215,
+                        color: 421075455,
                         linewidth: 10
                     }),
                     c = new Pf(o, l);
