@@ -20866,8 +20866,8 @@
                     direction: -1
                 }, this.PARAMS = {
                     pixelSize: 2,
-                    bloomStrength: 1.2,
-                    bloomRadius: .3,
+                    bloomStrength: .5,
+                    bloomRadius: .15,
                     cameraSpeed: .02,
                     cameraY: 3.25,
                     cameraFov: 100,
