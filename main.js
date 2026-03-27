@@ -20866,8 +20866,8 @@
                     direction: -1
                 }, this.PARAMS = {
                     pixelSize: 2,
-                    bloomStrength: .4,
-                    bloomRadius: .1,
+                    bloomStrength: 1.2,
+                    bloomRadius: .3,
                     cameraSpeed: .02,
                     cameraY: 3.25,
                     cameraFov: 100,
@@ -21025,20 +21025,20 @@
             generateCube(t, e, n) {
                 let i = (this.noise(e * this.freqX, this.noiseZ * this.freqZ) + 1) / 2 * this.cubeHeight;
                 ((e + 1) % 4 == 0 || (n + 1) % 4 == 0) && (i = 0);
-                const r = new bu(.6, i, 3),
+                const r = new bu(.5 + Math.random() * .5, i, 3),
                     s = new zh({
                         color: 0,
                         wireframe: !1
                     }),
                     a = new vu(r, s);
-                a.position.set(e, i / 2, 0), a.rotation.y = Math.random() * Math.PI, a.scale.set(.998, .998, .998), t.add(a);
+                a.position.set(e + (Math.random() - .5) * .3, i / 2 + (Math.random() - .5) * .3, (Math.random() - .5) * .3), a.rotation.x = Math.random() * Math.PI * 2, a.rotation.y = Math.random() * Math.PI * 2, a.rotation.z = Math.random() * Math.PI * 2, a.scale.set(.998, .998, .998), t.add(a);
                 const o = new Of(r),
                     l = new xf({
-                        color: 3355443,
-                        linewidth: 10
+                        color: 10526880,
+                        linewidth: 15
                     }),
                     c = new Pf(o, l);
-                c.position.set(e, i / 2, 0), c.rotation.y = a.rotation.y, t.add(c)
+                c.position.copy(a.position), c.rotation.copy(a.rotation), t.add(c)
             }
             updateRow(t, e) {
                 t.remove(...t.children);
