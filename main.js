@@ -21025,20 +21025,20 @@
             generateCube(t, e, n) {
                 let i = (this.noise(e * this.freqX, this.noiseZ * this.freqZ) + 1) / 2 * this.cubeHeight;
                 ((e + 1) % 4 == 0 || (n + 1) % 4 == 0) && (i = 0);
-                const r = new bu(.8, i, 4),
+                const r = new bu(.6, i, 3),
                     s = new zh({
                         color: 0,
                         wireframe: !1
                     }),
                     a = new vu(r, s);
-                a.position.set(e, i / 2, 0), a.scale.set(.998, .998, .998), t.add(a);
+                a.position.set(e, i / 2, 0), a.rotation.y = Math.random() * Math.PI, a.scale.set(.998, .998, .998), t.add(a);
                 const o = new Of(r),
                     l = new xf({
-                        color: 421075455,
+                        color: 3355443,
                         linewidth: 10
                     }),
                     c = new Pf(o, l);
-                c.position.set(e, i / 2, 0), t.add(c)
+                c.position.set(e, i / 2, 0), c.rotation.y = a.rotation.y, t.add(c)
             }
             updateRow(t, e) {
                 t.remove(...t.children);
