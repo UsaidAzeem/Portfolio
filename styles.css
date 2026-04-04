@@ -586,15 +586,16 @@ header {
     padding: 1rem 1rem;
   }
 }
+
 @media only screen and (max-width: 767px) {
-  header nav {
-    justify-content: center;
-  }
-  header nav a {
+  header nav a:not(.logo) {
     display: none;
   }
-  header nav a:first-child {
+  header nav a.logo {
     display: block;
+  }
+  .menu-toggle {
+    display: flex;
   }
 }
 

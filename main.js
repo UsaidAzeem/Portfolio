@@ -4308,8 +4308,12 @@
                                 t.classList.add("active")
                             })), t.getAttribute("href")) {
                             e.preventDefault();
-                            const n = t.getAttribute("href"),
-                                i = document.querySelector(`[data-section="${t.getAttribute("href")}"]`);
+                            const n = t.getAttribute("href");
+                            if (n.endsWith('.html') || n.endsWith('.htm')) {
+                                window.open(n, '_blank');
+                                return;
+                            }
+                            const i = document.querySelector(`[data-section="${t.getAttribute("href")}"]`);
                             i ? (this.scrollSmooth.scrollTo(i, {
                                 offset: .15 * -window.innerHeight
                             }), window.history.pushState({}, "", n)) : "/" === n && (this.scrollSmooth.scrollTo(0), window.history.pushState({}, "", "/"))

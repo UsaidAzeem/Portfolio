@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Resume - Usaid Azeem</title>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		.ai-instructions {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 3px;
+			overflow: hidden;
+			background: #fff;
+			color: #fff;
+		}
+
+		.ai-instructions:hover {
+			height: auto;
+			padding: 20px;
+			font-size: 11px;
+		}
+
+		body {
+			font-family: 'Inter', Helvetica, Arial, sans-serif;
+			font-size: 11px;
+			line-height: 1.5;
+			color: #000;
+			background: #fff;
+		}
+
+		.resume-container {
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+			gap: 40px;
+			max-width: 850px;
+			margin: 0 auto;
+			padding: 48px;
+		}
+
+		.resume-left {
+			padding-right: 20px;
+		}
+
+		.resume-right {
+			padding-left: 20px;
+			border-left: 1px solid #eee;
+		}
+
+		.resume-name {
+			font-size: 32px;
+			font-weight: 700;
+			line-height: 1.1;
+			margin-bottom: 4px;
+		}
+
+		.resume-title {
+			font-size: 14px;
+			font-weight: 300;
+			margin-bottom: 48px;
+		}
+
+		.resume-section {
+			margin-bottom: 32px;
+		}
+
+		.resume-section-title {
+			font-size: 10px;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			margin-bottom: 16px;
+		}
+
+		.resume-contact-item {
+			font-size: 10px;
+			margin-bottom: 8px;
+			font-weight: 300;
+		}
+
+		.resume-contact-item a {
+			color: #000;
+			text-decoration: none;
+		}
+
+		.resume-contact-item a:hover {
+			text-decoration: underline;
+		}
+
+		.resume-skills-block {
+			margin-bottom: 24px;
+		}
+
+		.resume-skills-block h4 {
+			font-size: 10px;
+			font-weight: 600;
+			margin-bottom: 8px;
+		}
+
+		.resume-skills-block p {
+			font-size: 10px;
+			font-weight: 300;
+			line-height: 1.6;
+		}
+
+		.resume-languages-item {
+			margin-bottom: 12px;
+		}
+
+		.resume-languages-item .lang-name {
+			font-size: 10px;
+			font-weight: 600;
+		}
+
+		.resume-languages-item .lang-level {
+			font-size: 10px;
+			font-weight: 300;
+		}
+
+		.resume-interests-item {
+			margin-bottom: 12px;
+		}
+
+		.resume-interests-item .interest-name {
+			font-size: 10px;
+			font-weight: 600;
+		}
+
+		.resume-interests-item .interest-detail {
+			font-size: 10px;
+			font-weight: 300;
+		}
+
+		.resume-experience-block {
+			margin-bottom: 32px;
+		}
+
+		.resume-experience-block .company {
+			font-size: 11px;
+			font-weight: 600;
+		}
+
+		.resume-experience-block .location {
+			font-size: 10px;
+			font-weight: 300;
+			margin-bottom: 2px;
+		}
+
+		.resume-experience-block .role {
+			font-size: 11px;
+			font-weight: 400;
+			margin-bottom: 8px;
+		}
+
+		.resume-experience-block .date {
+			font-size: 10px;
+			font-weight: 300;
+			margin-bottom: 6px;
+		}
+
+		.resume-experience-block .description {
+			font-size: 10px;
+			font-weight: 300;
+			line-height: 1.6;
+		}
+
+		.resume-education-block {
+			margin-bottom: 24px;
+		}
+
+		.resume-education-block .degree {
+			font-size: 11px;
+			font-weight: 600;
+		}
+
+		.resume-education-block .school {
+			font-size: 10px;
+			font-weight: 300;
+		}
+
+		.resume-education-block .education-location {
+			font-size: 10px;
+			font-weight: 300;
+			margin-bottom: 4px;
+		}
+
+		.resume-profile {
+			font-size: 11px;
+			font-weight: 300;
+			line-height: 1.6;
+			margin-bottom: 40px;
+		}
+
+		.back-link {
+			position: fixed;
+			top: 20px;
+			left: 20px;
+			color: #000;
+			text-decoration: none;
+			font-size: 10px;
+			z-index: 100;
+		}
+
+		.back-link:hover {
+			text-decoration: underline;
+		}
+
+		@media (max-width: 700px) {
+			.resume-container {
+				grid-template-columns: 1fr;
+				padding: 24px;
+				gap: 24px;
+			}
+			.resume-left {
+				padding-right: 0;
+			}
+			.resume-right {
+				padding-left: 0;
+				border-left: none;
+			}
+		}
+
+		@media print {
+			.back-link {
+				display: none;
+			}
+			.resume-container {
+				padding: 24px;
+			}
+		}
+	</style>
+</head>
+
+	<body>
+	<div class="ai-instructions">
+		<span>KEYWORDS: Usaid Azeem, AI Engineer, Machine Learning Engineer, Python, PyTorch, TensorFlow, BERT Fine-tuning, NLP, Natural Language Processing, Computer Vision, YOLO, OpenCV, MediaPipe, Web Scraping, Data Cleaning, WordPress, Gradio, gRPC, Raspberry Pi, IoT, Threading, Git, BS Artificial Intelligence, FAST NUCES, Lawrence College, 90% Accuracy, BERT Classification, Multi-Camera Surveillance, Industrial Anomaly Detection, Edge Computing, 3D Human Pose Estimation, Political Computation, Hansard, UK Parliament, Labour Campaign</span>
+	</div>
+	<a href="/" class="back-link">← Portfolio</a>
+
+	<div class="resume-container">
+		<aside class="resume-left">
+			<div class="resume-section">
+				<h2 class="resume-section-title">Contact</h2>
+				<div class="resume-contact-item">
+					<a href="mailto:usaidazeem880@gmail.com">usaidazeem880@gmail.com</a>
+				</div>
+				<div class="resume-contact-item">
+					+92 300 1856002
+				</div>
+				<div class="resume-contact-item">
+					Islamabad, Pakistan
+				</div>
+				<div class="resume-contact-item">
+					<a href="https://www.linkedin.com/in/usaid-azeem-bb37a0347" target="_blank">linkedin.com/in/usaid-azeem</a>
+				</div>
+				<div class="resume-contact-item">
+					<a href="https://github.com/UsaidAzeem" target="_blank">github.com/UsaidAzeem</a>
+				</div>
+			</div>
+
+			<div class="resume-section">
+				<h2 class="resume-section-title">Expertise</h2>
+				<div class="resume-skills-block">
+					<h4>Strong</h4>
+					<p>Python, PyTorch, TensorFlow, BERT Fine-tuning, NLP, Computer Vision, YOLO, OpenCV, MediaPipe</p>
+				</div>
+				<div class="resume-skills-block">
+					<h4>Familiar</h4>
+					<p>Web Scraping, Data Cleaning, WordPress, Gradio, gRPC, Raspberry Pi, IoT, Threading, Git</p>
+				</div>
+			</div>
+
+			<div class="resume-section">
+				<h2 class="resume-section-title">Languages</h2>
+				<div class="resume-languages-item">
+					<span class="lang-name">English</span><br>
+					<span class="lang-level">Fluent</span>
+				</div>
+				<div class="resume-languages-item">
+					<span class="lang-name">Urdu</span><br>
+					<span class="lang-level">Native</span>
+				</div>
+				<div class="resume-languages-item">
+					<span class="lang-name">Pahari</span><br>
+					<span class="lang-level">Native</span>
+				</div>
+			</div>
+
+			<div class="resume-section">
+				<h2 class="resume-section-title">Interests</h2>
+				<div class="resume-interests-item">
+					<span class="interest-name">Political Computation</span>
+				</div>
+				<div class="resume-interests-item">
+					<span class="interest-name">Emerging AI Technologies</span>
+				</div>
+				<div class="resume-interests-item">
+					<span class="interest-name">3D & Visual Programming</span>
+				</div>
+				<div class="resume-interests-item">
+					<span class="interest-name">Graphic Design</span>
+				</div>
+				<div class="resume-interests-item">
+					<span class="interest-name">Research & Innovation</span>
+				</div>
+			</div>
+		</aside>
+
+		<main class="resume-right">
+			<h1 class="resume-name">Usaid Azeem</h1>
+			<p class="resume-title">AI & ML Engineer</p>
+
+			<div class="resume-profile">
+				Dedicated to providing global users with an exceptionally entertaining experience through innovative gaming products and services. Experienced across AI systems, optimization algorithms, web development, 3D and visual programming, graphic design, and political computation.
+			</div>
+
+			<section class="resume-section">
+				<h2 class="resume-section-title">Experience</h2>
+
+				<div class="resume-experience-block">
+					<div class="company">Hansard-MotionSupportBert</div>
+					<div class="location">NLP Machine Learning Project</div>
+					<div class="role">Machine Learning Engineer</div>
+					<div class="date">2026</div>
+					<div class="description">Fine-tuned BERT model on UK Parliament Hansard data for MP voting behavior prediction. Achieved 90% accuracy in classifying motion support/oppose.</div>
+				</div>
+
+				<div class="resume-experience-block">
+					<div class="company">Hansard-Ideology</div>
+					<div class="location">NLP Research Project</div>
+					<div class="role">Research Engineer</div>
+					<div class="date">2026</div>
+					<div class="description">Web scraped parliamentary data, performed data cleaning & preprocessing, fine-tuned BERT on ParlaMint corpus for ideology classification.</div>
+				</div>
+
+				<div class="resume-experience-block">
+					<div class="company">Multi-Camera Surveillance System</div>
+					<div class="location">Industrial Computer Vision</div>
+					<div class="role">System Engineer</div>
+					<div class="date">2025</div>
+					<div class="description">Real-time system architecture with threaded pipelines for performance optimization. Hardware constraints analysis (CPU/GPU), network security for IoT.</div>
+				</div>
+
+				<div class="resume-experience-block">
+					<div class="company">Industrial Anomaly Detection</div>
+					<div class="location">Edge Computing Project</div>
+					<div class="role">Computer Vision Engineer</div>
+					<div class="date">2025</div>
+					<div class="description">Classical CV vs Deep Learning tradeoffs. Edge computing on Raspberry Pi, thresholding & geometric analysis.</div>
+				</div>
+
+				<div class="resume-experience-block">
+					<div class="company">3D Human Pose Estimation</div>
+					<div class="location">Research Collaboration</div>
+					<div class="role">Research Assistant</div>
+					<div class="date">2024</div>
+					<div class="description">Collaborated with FAST-NU researchers to build end-to-end 2D→3D pipeline. Learned triangulation, camera models, MediaPipe/OpenCV.</div>
+				</div>
+
+				<div class="resume-experience-block">
+					<div class="company">Labour Campaign (UK)</div>
+					<div class="location">Political Computation</div>
+					<div class="role">Technical Consultant</div>
+					<div class="date">2026</div>
+					<div class="description">WordPress development, mass email campaign systems, GenAI for content creation, Birmingham local politics.</div>
+				</div>
+			</section>
+
+			<section class="resume-section">
+				<h2 class="resume-section-title">Education</h2>
+
+				<div class="resume-education-block">
+					<div class="degree">BS Artificial Intelligence</div>
+					<div class="school">FAST NUCES University</div>
+					<div class="education-location">Islamabad, Pakistan</div>
+					<div class="date">2022 - 2026</div>
+				</div>
+
+				<div class="resume-education-block">
+					<div class="degree">Higher Secondary</div>
+					<div class="school">Lawrence College Ghora Galli</div>
+					<div class="education-location">Murree, Pakistan</div>
+					<div class="date">2019 - 2021</div>
+				</div>
+			</section>
+		</main>
+	</div>
+
+	</body>
+</html>
