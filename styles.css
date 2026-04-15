@@ -3272,9 +3272,9 @@ html.force--consent.show--consent body {
   
   header {
     padding: 0.75rem;
-    display: flex;
-    visibility: visible;
-    opacity: 1;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
   
   footer {
