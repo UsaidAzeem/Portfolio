@@ -1029,6 +1029,14 @@ html[lang=zh-CN] .section--intro h1 {
     background: #0a0a0a !important;
     border-bottom: 1px solid #333;
   }
+  header nav {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  header nav a {
+    font-size: 0.7rem;
+  }
   
   .section--intro h1 {
     width: 90%;
