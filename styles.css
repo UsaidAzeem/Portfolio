@@ -602,15 +602,20 @@ header {
     flex-wrap: wrap;
     gap: 0.75rem;
     align-items: center;
+    width: 100%;
   }
-  header nav a {
+  header nav a:not(.logo) {
     display: inline-block !important;
     visibility: visible !important;
-    font-size: 0.7rem;
+    font-size: 0.65rem !important;
+    color: #fff !important;
+    text-decoration: none;
+    white-space: nowrap;
   }
   header nav a.logo {
     display: block !important;
     visibility: visible !important;
+    color: #fff !important;
   }
   .menu-toggle {
     display: none !important;
@@ -1045,15 +1050,20 @@ html[lang=zh-CN] .section--intro h1 {
     flex-wrap: wrap;
     gap: 0.5rem;
     align-items: center;
+    width: 100%;
   }
-  header nav a {
+  header nav a:not(.logo) {
     display: inline-block !important;
     visibility: visible !important;
-    font-size: 0.65rem;
+    font-size: 0.6rem !important;
+    color: #fff !important;
+    text-decoration: none;
+    white-space: nowrap;
   }
   header nav a.logo {
     display: block !important;
     visibility: visible !important;
+    color: #fff !important;
   }
   
   .section--intro h1 {
@@ -3316,15 +3326,20 @@ html.force--consent.show--consent body {
     flex-wrap: wrap;
     gap: 0.5rem;
     align-items: center;
+    width: 100%;
   }
-  header nav a {
+  header nav a:not(.logo) {
     display: inline-block !important;
     visibility: visible !important;
-    font-size: 0.65rem;
+    font-size: 0.6rem !important;
+    color: #fff !important;
+    text-decoration: none;
+    white-space: nowrap;
   }
   header nav a.logo {
     display: block !important;
     visibility: visible !important;
+    color: #fff !important;
   }
   .menu-toggle {
     display: none !important;
