@@ -588,6 +588,11 @@ header {
 }
 
 @media only screen and (max-width: 767px) {
+  header {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+  }
   header nav a:not(.logo) {
     display: none;
   }
@@ -1023,8 +1028,8 @@ html[lang=zh-CN] .section--intro h1 {
     width: 80%;
     margin: auto;
     display: inline-block;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
   }
   .section--intro h1 br {
     content: "";
