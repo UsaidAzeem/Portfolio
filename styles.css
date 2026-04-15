@@ -595,14 +595,16 @@ header {
     background: #0a0a0a;
     border-bottom: 1px solid #333;
   }
-  header nav a:not(.logo) {
-    display: none;
+  header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
-  header nav a.logo {
-    display: block;
+  header nav a {
+    font-size: 0.75rem;
   }
   .menu-toggle {
-    display: flex;
+    display: none;
   }
 }
 
