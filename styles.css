@@ -592,6 +592,8 @@ header {
     display: flex;
     visibility: visible;
     opacity: 1;
+    background: #0a0a0a;
+    border-bottom: 1px solid #333;
   }
   header nav a:not(.logo) {
     display: none;
@@ -1022,14 +1024,16 @@ html[lang=zh-CN] .section--intro h1 {
     display: flex !important;
     visibility: visible !important;
     opacity: 1 !important;
+    background: #0a0a0a !important;
+    border-bottom: 1px solid #333;
   }
   
   .section--intro h1 {
-    width: 80%;
+    width: 90%;
     margin: auto;
     display: inline-block;
-    margin-top: 5rem;
-    margin-bottom: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
   }
   .section--intro h1 br {
     content: "";
@@ -3267,7 +3271,7 @@ html.force--consent.show--consent body {
   .section--intro h1 {
     font-size: 1.8rem;
     width: 90%;
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
   
   header {
@@ -3275,6 +3279,8 @@ html.force--consent.show--consent body {
     display: flex !important;
     visibility: visible !important;
     opacity: 1 !important;
+    background: #0a0a0a !important;
+    border-bottom: 1px solid #333;
   }
   
   footer {
