@@ -6,26 +6,27 @@
 
 <style>
 body {
-  font-family: "Times New Roman", serif;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   margin: 40px auto;
   max-width: 800px;
   color: #000;
   line-height: 1.6;
-  font-size: 13px;
+  font-size: 12.5px;
 }
 
 h1 {
   text-align: center;
-  font-size: 28px;
-  letter-spacing: 1px;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
   margin-bottom: 6px;
-  font-weight: 700;
 }
 
 .header-info {
   text-align: center;
-  font-size: 12px;
+  font-size: 11px;
   margin-bottom: 12px;
+  color: #555;
 }
 
 .header-info a {
@@ -33,27 +34,22 @@ h1 {
   text-decoration: none;
 }
 
-.divider {
-  border-bottom: 1px solid #000;
-  margin-bottom: 15px;
-}
-
 .section {
-  margin-bottom: 18px;
+  margin-bottom: 26px;
 }
 
 .section-title {
   font-weight: 700;
-  font-size: 15px;
-  border-bottom: 1px solid #000;
-  padding-bottom: 4px;
-  margin-bottom: 10px;
-  letter-spacing: 0.5px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  color: #333;
 }
 
 .row {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 .bold {
@@ -64,28 +60,17 @@ h1 {
   font-size: 12px;
 }
 
-.row .small:last-child {
-  font-size: 11px;
-  color: #333;
-}
-
 ul {
   margin-top: 5px;
   padding-left: 18px;
 }
 
-.skills {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.tech-skills {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+ul li {
+  margin-bottom: 4px;
 }
 
 .exp-block {
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
 
 .exp-block:last-child {
@@ -93,10 +78,18 @@ ul {
 }
 
 .project-item {
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .project-item:last-child {
+  margin-bottom: 0;
+}
+
+.skills-block {
+  margin-bottom: 8px;
+}
+
+.skills-block:last-child {
   margin-bottom: 0;
 }
 </style>
@@ -107,72 +100,75 @@ ul {
 
 <h1>USAID AZEEM</h1>
 <div class="header-info">
-  +92 3001856002 | <a href="mailto:usaidazeem880@gmail.com">usaidazeem880@gmail.com</a> | Islamabad, Pakistan | <a href="https://www.linkedin.com/in/usaid-azeem-bb37a0347/" target="_blank">LinkedIn</a>
+  <span>+92 3001856002</span> · 
+  <a href="mailto:usaidazeem880@gmail.com">usaidazeem880@gmail.com</a> · 
+  <span>Islamabad</span> · 
+  <a href="https://www.linkedin.com/in/usaid-azeem-bb37a0347/" target="_blank">LinkedIn</a>
 </div>
-<div class="divider"></div>
 
 <div class="section">
   <div class="section-title">SUMMARY</div>
   <p class="small">
-    Aspiring AI & ML Engineer with hands-on experience in natural language processing, machine learning, and data-driven research. Proven ability to apply technical expertise to real-world problems including political analytics, industrial systems, and campaign technology. Seeking to contribute to data-informed policy development and public service.
+    AI & ML Engineer with hands-on experience in NLP, machine learning, and data-driven research. Proven ability to apply technical expertise to real-world problems including political analytics, industrial systems, and campaign technology.
   </p>
 </div>
 
 <div class="section">
   <div class="section-title">EDUCATION</div>
 
-  <div class="row bold">
-    <div>BS Artificial Intelligence</div>
-    <div>2026</div>
+  <div class="row">
+    <div class="bold">BS Artificial Intelligence</div>
+    <div class="small">2026</div>
   </div>
-  <div class="small">FAST-NUCES University, Islamabad</div>
+  <div class="small" style="margin-top: 2px;">FAST-NUCES University, Islamabad</div>
 
-  <br>
-
-  <div class="row bold">
-    <div>Higher Secondary</div>
-    <div></div>
+  <div class="row" style="margin-top: 12px;">
+    <div class="bold">Higher Secondary</div>
   </div>
-  <div class="small">Lawrence College Ghora Galli, Murree</div>
+  <div class="small" style="margin-top: 2px;">Lawrence College Ghora Galli, Murree</div>
 
-  <br>
-
-  <div class="bold small">Relevant Coursework:</div>
-  <div class="small">Natural Language Processing, Machine Learning, Neural Networks & Deep Learning, Generative AI, Evolutionary Algorithms, Computer Vision, Data Analysis</div>
+  <div class="small" style="margin-top: 14px;">
+    <span class="bold">Relevant Coursework:</span> Natural Language Processing, Machine Learning, Neural Networks & Deep Learning, Generative AI, Evolutionary Algorithms, Computer Vision, Data Analysis
+  </div>
 </div>
 
 <div class="section">
   <div class="section-title">EXPERIENCE</div>
 
   <div class="exp-block">
-    <div class="row bold small">
-      <div>Technical Consultant</div>
-      <div>Jan 2026 – 7 May 2026</div>
+    <div class="row">
+      <div class="bold">Technical Consultant</div>
+      <div class="small">Jan 2026 – May 2026</div>
     </div>
-    <div class="small">Labour Party | Birmingham, UK</div>
-    <div class="small">Developed campaign websites and email systems for Birmingham local elections. Utilized GenAI for content creation and optimized delivery for political outreach.</div>
+    <div class="small">Labour Party · Birmingham, UK</div>
+    <ul class="small">
+      <li>Built campaign websites and email systems for local elections</li>
+      <li>Used GenAI to optimize outreach and content creation</li>
+    </ul>
   </div>
 
-  <br>
-
   <div class="exp-block">
-    <div class="row bold small">
-      <div>Computer Vision Engineer</div>
-      <div>Oct 2025 – present</div>
+    <div class="row">
+      <div class="bold">Computer Vision Engineer</div>
+      <div class="small">Oct 2025 – present</div>
     </div>
-    <div class="small">Industrial | Attar Industrial Area, Pakistan</div>
-    <div class="small">Designed multi-camera surveillance system with threaded pipelines and YOLO-based person detection. Developed high-speed industrial anomaly detection system using Raspberry Pi and classical computer vision techniques.</div>
+    <div class="small">Industrial · Attar Industrial Area, Pakistan</div>
+    <ul class="small">
+      <li>Designed multi-camera surveillance system with threaded pipelines and YOLO-based detection</li>
+      <li>Developed high-speed anomaly detection system using Raspberry Pi</li>
+    </ul>
   </div>
 
-  <br>
-
   <div class="exp-block">
-    <div class="row bold small">
-      <div>Research And Development Scientist</div>
-      <div>Feb 2024 – Jul 2024</div>
+    <div class="row">
+      <div class="bold">Research And Development Scientist</div>
+      <div class="small">Feb 2024 – Jul 2024</div>
     </div>
-    <div class="small">NASTP (National Aerospace Science & Technology Park) | Rawalpindi, Pakistan</div>
-    <div class="small">Conducted research and development on AI-driven telecom solutions. Built and trained machine learning models using call-centre and telecom datasets.</div>
+    <div class="small">NASTP · Rawalpindi, Pakistan</div>
+    <ul class="small">
+      <li>Conducted R&D on AI-driven telecom solutions</li>
+      <li>Built and trained ML models using telecom datasets</li>
+    </ul>
   </div>
 </div>
 
@@ -180,14 +176,12 @@ ul {
   <div class="section-title">RESEARCH</div>
 
   <div class="project-item">
-    <div class="bold small">DIS-EXT: Extremism Detection via NLP</div>
-    <div class="small">Final Year Project focused on detecting ideological alignment and extremist discourse in social media using NLP, stance detection, relevancy filtering, and historical user behavior modeling.</div>
+    <div class="bold">DIS-EXT: Extremism Detection via NLP</div>
+    <div class="small">Final Year Project focused on detecting ideological alignment and extremist discourse using NLP, stance detection, and user behavior modeling.</div>
   </div>
 
-  <br>
-
   <div class="project-item">
-    <div class="bold small">3D Human Pose Estimation</div>
+    <div class="bold">3D Human Pose Estimation</div>
     <div class="small">Collaborated with FAST-NU researchers to build 2D to 3D pose estimation pipeline using MediaPipe and OpenCV.</div>
   </div>
 </div>
@@ -196,87 +190,52 @@ ul {
   <div class="section-title">PROJECTS</div>
 
   <div class="project-item">
-    <div class="bold small">Hansard-MotionSupportBert</div>
-    <div class="small">Fine-tuned BERT on UK Parliament Hansard for MP voting behavior prediction. Achieved 90% accuracy in binary classification of motion support/oppose.</div>
+    <div class="bold">Hansard-MotionSupportBert</div>
+    <div class="small">Fine-tuned BERT on UK Parliament Hansard for MP voting behavior prediction. Achieved 90% accuracy in binary classification.</div>
   </div>
 
-  <br>
-
   <div class="project-item">
-    <div class="bold small">Hansard-Ideology</div>
-    <div class="small">Web scraped parliamentary data, performed data cleaning and preprocessing. Fine-tuned BERT on ParlaMint corpus for ideology classification.</div>
+    <div class="bold">Hansard-Ideology</div>
+    <div class="small">Web scraped parliamentary data, performed data cleaning. Fine-tuned BERT on ParlaMint corpus for ideology classification.</div>
   </div>
 
-  <br>
-
   <div class="project-item">
-    <div class="bold small">Roman Urdu Converter</div>
+    <div class="bold">Roman Urdu Converter</div>
     <div class="small">Built NLP tool using Regex and phonetic mapping to convert Roman Urdu text to Urdu script.</div>
   </div>
 
-  <br>
-
   <div class="project-item">
-    <div class="bold small">3D Model to ASCII Renderer</div>
+    <div class="bold">3D Model to ASCII Renderer</div>
     <div class="small">Created web-based renderer using Three.js to convert 3D models to real-time ASCII art.</div>
   </div>
 
-  <br>
-
   <div class="project-item">
-    <div class="bold small">VEGA - Evolutionary Image-to-ASCII</div>
-    <div class="small">Built genetic algorithm system that evolves ASCII representations of images using fitness functions and mutation operators.</div>
+    <div class="bold">VEGA - Evolutionary Image-to-ASCII</div>
+    <div class="small">Built genetic algorithm system that evolves ASCII representations using fitness functions and mutation operators.</div>
   </div>
 </div>
 
 <div class="section">
   <div class="section-title">CERTIFICATIONS</div>
 
-  <div class="small bold">Python Teaching Certificate</div>
-  <div class="small">FAST-NUCES | June 2024</div>
-  <div class="small">Conducted introductory Python training for University Math Faculty.</div>
+  <div class="project-item">
+    <div class="bold">Python Teaching Certificate</div>
+    <div class="small">FAST-NUCES · June 2024 — Conducted introductory Python training for University Math Faculty.</div>
+  </div>
 
-  <br>
-
-  <div class="small bold">Volunteer Certificate</div>
-  <div class="small">Muslim Hands | February – March 2019</div>
-  <div class="small">Kashmir Earthquake Relief: Disaster and humanitarian relief work.</div>
-</div>
-
-<div class="section">
-  <div class="section-title">PROFESSIONAL SKILLS</div>
-  <div class="skills small">
-    <ul>
-      <li>Problem Solving & Research</li>
-      <li>Communication & Teamwork</li>
-    </ul>
-    <ul>
-      <li>Project Management</li>
-      <li>Critical Analysis</li>
-    </ul>
+  <div class="project-item">
+    <div class="bold">Volunteer Certificate</div>
+    <div class="small">Muslim Hands · February 2019 — Kashmir Earthquake Relief: Disaster and humanitarian relief work.</div>
   </div>
 </div>
 
 <div class="section">
-  <div class="section-title">TECHNICAL SKILLS</div>
-  <div class="tech-skills small">
-    <ul>
-      <li>Python</li>
-      <li>PyTorch</li>
-    </ul>
-    <ul>
-      <li>TensorFlow</li>
-      <li>NLP / BERT</li>
-    </ul>
-    <ul>
-      <li>OpenCV</li>
-      <li>YOLO</li>
-    </ul>
-    <ul>
-      <li>MediaPipe</li>
-      <li>Raspberry Pi</li>
-    </ul>
-  </div>
+  <div class="section-title">SKILLS</div>
+
+  <div class="small skills-block"><b>Technical:</b> Python, PyTorch, TensorFlow, OpenCV, YOLO</div>
+  <div class="small skills-block"><b>AI/ML:</b> NLP, BERT, Computer Vision</div>
+  <div class="small skills-block"><b>Tools:</b> Git, Linux, Raspberry Pi, WordPress, Gradio, gRPC</div>
+  <div class="small skills-block"><b>Soft Skills:</b> Problem Solving, Research, Communication, Teamwork, Project Management</div>
 </div>
 
 </body>
