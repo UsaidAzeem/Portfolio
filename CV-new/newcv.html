@@ -8,14 +8,13 @@
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   margin: 40px auto;
-  max-width: 800px;
+  max-width: 850px;
   color: #000;
   line-height: 1.6;
   font-size: 12.5px;
 }
 
 h1 {
-  text-align: center;
   font-size: 26px;
   font-weight: 600;
   letter-spacing: 1.5px;
@@ -23,9 +22,8 @@ h1 {
 }
 
 .header-info {
-  text-align: center;
   font-size: 11px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   color: #555;
 }
 
@@ -34,8 +32,22 @@ h1 {
   text-decoration: none;
 }
 
+.container {
+  display: flex;
+  gap: 40px;
+}
+
+.sidebar {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.main {
+  flex: 1;
+}
+
 .section {
-  margin-bottom: 26px;
+  margin-bottom: 22px;
 }
 
 .section-title {
@@ -61,16 +73,16 @@ h1 {
 }
 
 ul {
-  margin-top: 5px;
-  padding-left: 18px;
+  margin-top: 4px;
+  padding-left: 16px;
 }
 
 ul li {
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 .exp-block {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .exp-block:last-child {
@@ -78,7 +90,7 @@ ul li {
 }
 
 .project-item {
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .project-item:last-child {
@@ -86,11 +98,28 @@ ul li {
 }
 
 .skills-block {
-  margin-bottom: 6px;
+  margin-bottom: 12px;
 }
 
 .skills-block:last-child {
   margin-bottom: 0;
+}
+
+.skills-title {
+  font-weight: 600;
+  font-size: 11px;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+@media print {
+  .container { display: block; }
+  .sidebar { width: 100%; margin-bottom: 20px; }
+}
+
+@media (max-width: 700px) {
+  .container { display: block; }
+  .sidebar { width: 100%; margin-bottom: 20px; }
 }
 </style>
 
@@ -106,154 +135,183 @@ ul li {
   <a href="https://www.linkedin.com/in/usaid-azeem-bb37a0347/" target="_blank">LinkedIn</a>
 </div>
 
-<div class="section">
-  <div class="section-title">SUMMARY</div>
-  <p class="small">
-    AI & Machine Learning Engineer with experience building NLP and computer vision systems for real-world applications. Proven ability to design data pipelines, train deep learning models, and optimize performance for production-like environments. Delivered solutions across political analytics, industrial monitoring, and behavioral modeling. Seeking AI/Data Analyst internship to apply machine learning and data-driven decision making at scale.
-  </p>
-</div>
-
-<div class="section">
-  <div class="section-title">EDUCATION</div>
-
-  <div class="row">
-    <div class="bold">BS Artificial Intelligence</div>
-    <div class="small">2026</div>
-  </div>
-  <div class="small" style="margin-top: 2px;">FAST-NUCES University, Islamabad</div>
-
-  <div class="row" style="margin-top: 12px;">
-    <div class="bold">Higher Secondary</div>
-  </div>
-  <div class="small" style="margin-top: 2px;">Lawrence College Ghora Galli, Murree</div>
-
-  <div class="small" style="margin-top: 14px;">
-    <span class="bold">Relevant Coursework:</span> Natural Language Processing, Machine Learning, Neural Networks & Deep Learning, Generative AI, Evolutionary Algorithms, Computer Vision, Data Analysis
-  </div>
-</div>
-
-<div class="section">
-  <div class="section-title">EXPERIENCE</div>
-
-  <div class="exp-block">
-    <div class="row">
-      <div class="bold">Technical Consultant</div>
-      <div class="small">Jan 2026 – May 2026</div>
+<div class="container">
+  <aside class="sidebar">
+    <div class="section">
+      <div class="section-title">SKILLS</div>
+      
+      <div class="skills-block">
+        <div class="skills-title">Programming</div>
+        <div class="small">Python</div>
+      </div>
+      
+      <div class="skills-block">
+        <div class="skills-title">ML Frameworks</div>
+        <div class="small">PyTorch, TensorFlow</div>
+      </div>
+      
+      <div class="skills-block">
+        <div class="skills-title">AI/ML</div>
+        <div class="small">NLP, BERT, Computer Vision, Deep Learning</div>
+      </div>
+      
+      <div class="skills-block">
+        <div class="skills-title">Data</div>
+        <div class="small">Data Preprocessing, Feature Engineering, Model Evaluation</div>
+      </div>
+      
+      <div class="skills-block">
+        <div class="skills-title">Tools</div>
+        <div class="small">OpenCV, YOLO, MediaPipe, Raspberry Pi</div>
+      </div>
     </div>
-    <div class="small">Labour Party · Birmingham, UK</div>
-    <ul class="small">
-      <li>Developed and deployed campaign websites and automated email systems supporting local election operations</li>
-      <li>Leveraged Generative AI tools to generate and optimize outreach content, improving content production speed</li>
-      <li>Structured and streamlined campaign data workflows for efficient content delivery and targeting</li>
-    </ul>
-  </div>
 
-  <div class="exp-block">
-    <div class="row">
-      <div class="bold">Computer Vision Engineer</div>
-      <div class="small">Oct 2025 – present</div>
+    <div class="section">
+      <div class="section-title">CERTIFICATIONS</div>
+      
+      <div class="skills-block">
+        <div class="small bold">Python Teaching</div>
+        <div class="small">FAST-NUCES · 2024</div>
+      </div>
+      
+      <div class="skills-block">
+        <div class="small bold">Volunteer</div>
+        <div class="small">Muslim Hands · 2019</div>
+      </div>
     </div>
-    <div class="small">Industrial · Attar Industrial Area, Pakistan</div>
-    <ul class="small">
-      <li>Designed and implemented multi-camera real-time surveillance pipeline with threaded processing (~15–20 FPS)</li>
-      <li>Deployed YOLO-based person detection system optimized for edge devices with reduced inference latency (~25%)</li>
-      <li>Built industrial anomaly detection system on Raspberry Pi using OpenCV and classical computer vision techniques</li>
-      <li>Optimized frame processing and pipeline efficiency, significantly reducing detection lag in real-time environments</li>
-    </ul>
-  </div>
+  </aside>
 
-  <div class="exp-block">
-    <div class="row">
-      <div class="bold">Research And Development Engineer</div>
-      <div class="small">Feb 2024 – Jul 2024</div>
+  <main class="main">
+    <div class="section">
+      <div class="section-title">SUMMARY</div>
+      <p class="small">
+        AI & Machine Learning Engineer with experience building NLP and computer vision systems for real-world applications. Proven ability to design data pipelines, train deep learning models, and optimize performance for production-like environments. Delivered solutions across political analytics, industrial monitoring, and behavioral modeling. Seeking AI/Data Analyst internship to apply machine learning and data-driven decision making at scale.
+      </p>
     </div>
-    <div class="small">NASTP · Rawalpindi, Pakistan</div>
-    <ul class="small">
-      <li>Developed machine learning models on telecom datasets for predictive analysis and pattern recognition</li>
-      <li>Performed data preprocessing, feature engineering, and model evaluation on structured datasets</li>
-      <li>Analyzed call-center data to extract behavioral insights and improve model performance</li>
-    </ul>
-  </div>
+
+    <div class="section">
+      <div class="section-title">EDUCATION</div>
+
+      <div class="row">
+        <div class="bold">BS Artificial Intelligence</div>
+        <div class="small">2026</div>
+      </div>
+      <div class="small">FAST-NUCES University, Islamabad</div>
+
+      <div class="row" style="margin-top: 10px;">
+        <div class="bold">Higher Secondary</div>
+      </div>
+      <div class="small">Lawrence College Ghora Galli, Murree</div>
+
+      <div class="small" style="margin-top: 10px;">
+        <span class="bold">Coursework:</span> NLP, Machine Learning, Neural Networks, Deep Learning, Generative AI, Computer Vision, Data Analysis
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">EXPERIENCE</div>
+
+      <div class="exp-block">
+        <div class="row">
+          <div class="bold">Computer Vision Engineer</div>
+          <div class="small">Oct 2025 – present</div>
+        </div>
+        <div class="small">Industrial · Attar Industrial Area, Pakistan</div>
+        <ul class="small">
+          <li>Designed and implemented multi-camera real-time surveillance pipeline with threaded processing (~15–20 FPS)</li>
+          <li>Deployed YOLO-based person detection system optimized for edge devices with reduced inference latency (~25%)</li>
+          <li>Built industrial anomaly detection system on Raspberry Pi using OpenCV and classical computer vision techniques</li>
+          <li>Optimized frame processing and pipeline efficiency, significantly reducing detection lag in real-time environments</li>
+        </ul>
+      </div>
+
+      <div class="exp-block">
+        <div class="row">
+          <div class="bold">Technical Consultant</div>
+          <div class="small">Jan 2026 – May 2026</div>
+        </div>
+        <div class="small">Labour Party · Birmingham, UK</div>
+        <ul class="small">
+          <li>Developed and deployed campaign websites and automated email systems supporting local election operations</li>
+          <li>Leveraged Generative AI tools to generate and optimize outreach content, improving content production speed</li>
+          <li>Structured and streamlined campaign data workflows for efficient content delivery and targeting</li>
+        </ul>
+      </div>
+
+      <div class="exp-block">
+        <div class="row">
+          <div class="bold">R&D Engineer</div>
+          <div class="small">Feb 2024 – Jul 2024</div>
+        </div>
+        <div class="small">NASTP · Rawalpindi, Pakistan</div>
+        <ul class="small">
+          <li>Developed machine learning models on telecom datasets for predictive analysis and pattern recognition</li>
+          <li>Performed data preprocessing, feature engineering, and model evaluation on structured datasets</li>
+          <li>Analyzed call-center data to extract behavioral insights and improve model performance</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">RESEARCH</div>
+
+      <div class="project-item">
+        <div class="bold">DIS-EXT: Extremism Detection via NLP</div>
+        <ul class="small">
+          <li>Built NLP pipeline for extremism detection using stance classification and relevancy filtering</li>
+          <li>Modeled user behavior using historical interaction data to improve classification accuracy</li>
+          <li>Combined textual and metadata features to enhance robustness of detection system</li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <div class="bold">3D Human Pose Estimation</div>
+        <ul class="small">
+          <li>Developed 2D-to-3D human pose estimation pipeline using MediaPipe and OpenCV</li>
+          <li>Processed keypoint data to reconstruct 3D human pose representations</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">PROJECTS</div>
+
+      <div class="project-item">
+        <div class="bold">Hansard-MotionSupportBert</div>
+        <ul class="small">
+          <li>Fine-tuned BERT on 50k+ UK Parliament Hansard records for voting behavior classification</li>
+          <li>Achieved 90% accuracy on binary classification (support vs oppose)</li>
+          <li>Performed preprocessing, tokenization, and hyperparameter tuning for performance optimization</li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <div class="bold">Hansard-Ideology</div>
+        <ul class="small">
+          <li>Scraped and processed parliamentary datasets for political ideology classification</li>
+          <li>Fine-tuned transformer models on ParlaMint corpus for stance prediction tasks</li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <div class="bold">Roman Urdu Converter</div>
+        <ul class="small">
+          <li>Developed rule-based NLP system using regex and phonetic mapping</li>
+          <li>Converted Roman Urdu text into Urdu script with structured linguistic rules</li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <div class="bold">3D-to-ASCII & VEGA</div>
+        <ul class="small">
+          <li>Built real-time 3D-to-ASCII rendering system using Three.js</li>
+          <li>Implemented genetic algorithm to evolve ASCII representations of images</li>
+          <li>Designed custom fitness functions and mutation strategies for optimization</li>
+        </ul>
+      </div>
+    </div>
+  </main>
 </div>
 
-<div class="section">
-  <div class="section-title">RESEARCH</div>
-
-  <div class="project-item">
-    <div class="bold">DIS-EXT: Extremism Detection via NLP</div>
-    <ul class="small">
-      <li>Built NLP pipeline for extremism detection using stance classification and relevancy filtering</li>
-      <li>Modeled user behavior using historical interaction data to improve classification accuracy</li>
-      <li>Combined textual and metadata features to enhance robustness of detection system</li>
-    </ul>
-  </div>
-
-  <div class="project-item">
-    <div class="bold">3D Human Pose Estimation</div>
-    <ul class="small">
-      <li>Developed 2D-to-3D human pose estimation pipeline using MediaPipe and OpenCV</li>
-      <li>Processed keypoint data to reconstruct 3D human pose representations</li>
-    </ul>
-  </div>
-</div>
-
-<div class="section">
-  <div class="section-title">PROJECTS</div>
-
-  <div class="project-item">
-    <div class="bold">Hansard-MotionSupportBert</div>
-    <ul class="small">
-      <li>Fine-tuned BERT on 50k+ UK Parliament Hansard records for voting behavior classification</li>
-      <li>Achieved 90% accuracy on binary classification (support vs oppose)</li>
-      <li>Performed preprocessing, tokenization, and hyperparameter tuning for performance optimization</li>
-    </ul>
-  </div>
-
-  <div class="project-item">
-    <div class="bold">Hansard-Ideology</div>
-    <ul class="small">
-      <li>Scraped and processed parliamentary datasets for political ideology classification</li>
-      <li>Fine-tuned transformer models on ParlaMint corpus for stance prediction tasks</li>
-    </ul>
-  </div>
-
-  <div class="project-item">
-    <div class="bold">Roman Urdu Converter</div>
-    <ul class="small">
-      <li>Developed rule-based NLP system using regex and phonetic mapping</li>
-      <li>Converted Roman Urdu text into Urdu script with structured linguistic rules</li>
-    </ul>
-  </div>
-
-  <div class="project-item">
-    <div class="bold">3D-to-ASCII & VEGA Evolutionary Renderer</div>
-    <ul class="small">
-      <li>Built real-time 3D-to-ASCII rendering system using Three.js</li>
-      <li>Implemented genetic algorithm to evolve ASCII representations of images</li>
-      <li>Designed custom fitness functions and mutation strategies for optimization</li>
-    </ul>
-  </div>
-</div>
-
-<div class="section">
-  <div class="section-title">CERTIFICATIONS</div>
-
-  <div class="project-item">
-    <div class="bold">Python Teaching Certificate</div>
-    <div class="small">FAST-NUCES · June 2024 — Conducted introductory Python training for University Math Faculty.</div>
-  </div>
-
-  <div class="project-item">
-    <div class="bold">Volunteer Certificate</div>
-    <div class="small">Muslim Hands · February 2019 — Kashmir Earthquake Relief: Disaster and humanitarian relief work.</div>
-  </div>
-</div>
-
-<div class="section">
-  <div class="section-title">SKILLS</div>
-
-  <div class="small skills-block"><b>Programming:</b> Python</div>
-  <div class="small skills-block"><b>ML Frameworks:</b> PyTorch, TensorFlow</div>
-  <div class="small skills-block"><b>AI/ML:</b> NLP, BERT, Computer Vision, Deep Learning</div>
-  <div class="small skills-block"><b>Data:</b> Data Preprocessing, Feature Engineering, Model Evaluation</div>
-  <div class="small skills-block"><b>Tools:</b
+</body>
+</html>
