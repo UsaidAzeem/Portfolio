@@ -145,12 +145,13 @@ ul li {
 
 .tech-tag {
   display: inline-block;
-  background: #e8f0fe;
+  background: #d2e3fc;
   color: #1a73e8;
   padding: 2px 8px;
   border-radius: 12px;
-  font-size: 10px;
+  font-size: 11px;
   margin: 1px 2px;
+  font-weight: 600;
 }
 
 .metrics {
@@ -159,8 +160,37 @@ ul li {
 }
 
 @media print {
-  .container { display: block; }
-  .sidebar { width: 100%; margin-bottom: 20px; }
+  body { margin: 20px auto; max-width: 100%; }
+  .container { 
+    display: flex; 
+    gap: 30px; 
+  }
+  .sidebar { 
+    width: 200px; 
+    flex-shrink: 0; 
+  }
+  .main { 
+    flex: 1; 
+    min-width: 0;
+  }
+  .section { 
+    margin-bottom: 16px; 
+  }
+  .section-title {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+  .small { 
+    font-size: 10px; 
+  }
+  .tech-tag {
+    font-size: 9px;
+    padding: 1px 4px;
+  }
+  .highlight {
+    font-size: 9px;
+    padding: 1px 3px;
+  }
 }
 
 @media (max-width: 750px) {

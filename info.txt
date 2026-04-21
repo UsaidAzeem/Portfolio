@@ -1,0 +1,16 @@
+VOLUNTEERING
+Muslim Hands – Kashmir Earthquake Relief (2019)
+KDF (Kashmir Development Foundation) Member – Tree Plantation in Kashmir (2025)
+
+
+
+
+Roman Urdu → Urdu Converter (NLP, Regex)
+3D Model to ASCII Renderer (Three.js + AsciiEffect)
+Sprite-based Websites with retro game styling
+Evolutionary Image-to-ASCII Generator (VEGA)
+Custom JS Music Player with waveform + UI
+
+
+
+

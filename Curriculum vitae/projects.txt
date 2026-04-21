@@ -1,0 +1,71 @@
+The Great British Parliament Dataset
+GitHub: github.com/UsaidAzeem/The-Great-British-Parliament-Dataset
+
+A comprehensive UK Parliament Hansard dataset (2020-2025) comprising 426,514 parliamentary speeches from 919 MPs. Built a BERT-based political ideology classifier to analyse and quantify ideological positioning across parties.
+
+Key achievements:
+- Fine-tuned ukparliamentBERT on ParlaMint UK corpus for binary political ideology classification
+- Created interactive Streamlit dashboard for exploring MP ideology profiles and topic analysis
+- Found Labour MPs show greater internal ideological diversity (σ=0.31) vs Conservatives (σ=0.18)
+- Identified key topics: NHS, cost of living, and public services dominate Labour discourse
+
+Skills demonstrated: NLP, BERT, Transformers, Streamlit, Plotly, pandas
+
+
+Posture Bot Beta
+GitHub: github.com/UsaidAzeem/Posture-Bot-Beta
+
+Real-time posture detection system using MediaPipe for pose estimation. Analyses body alignment from video input and provides instant feedback with a 0-100 score.
+
+Key features:
+- MediaPipe Pose Landmarker detecting 33 body landmarks
+- Weighted scoring: Neck (35%), Torso (45%), Head forward (20%)
+- Moving average smoothing (20-frame window) for stable readings
+- Skeleton overlay with colour-coded feedback (green=good, yellow=warning, red=bad)
+- CLI and GUI versions available
+
+Skills demonstrated: MediaPipe, OpenCV, Computer Vision, Python
+
+
+HydraSurveillance
+GitHub: github.com/UsaidAzeem/HydraSurveillance
+
+Production-grade industrial surveillance system processing 20+ RTSP camera streams simultaneously for round-the-clock security monitoring.
+
+Key capabilities:
+- Real-time person detection using YOLOv8n
+- Time-window filtering (10 PM - 6 AM active monitoring)
+- Automated snapshot capture with best-frame selection
+- Non-blocking alert pipeline (~45 second end-to-end)
+
+Performance: Single camera 4-9 FPS, 20 cameras 0.5-1 FPS, ~306 MB memory footprint
+
+Skills demonstrated: YOLOv8, OpenCV, Multi-threaded processing, RTSP streaming
+
+
+wh
+GitHub: github.com/UsaidAzeem/Hansard-MotionSupportBert
+
+Fine-tuned BERT model classifying UK Parliament speeches as support/oppose for parliamentary motions.
+
+Dataset: HanDeSeT (German-English Dependency Treebank with UK Parliament speeches)
+Model: sisyphus199/ukparliamentBERT (pre-trained on Hansard 2000-2020)
+Results: ~85% validation accuracy, ~95% confidence on examples
+
+
+Hansard Political Ideology Classifier
+GitHub: github.com/UsaidAzeem/Hansard-ideology
+
+Fine-tuned BERT model classifying UK Parliament speeches by political ideology (left-wing vs right-wing).
+
+Results: 78% validation accuracy. Conservative MPs consistently classified as right-wing, Labour/SNP/Liberal Democrats as left-wing.
+
+
+Horizon Paper (Website)
+GitHub: github.com/abdulrehmansafdar/Horizon-paper
+
+Factory website built in Angular for a client.
+
+
+Portfolio
+github.com/UsaidAzeem/Portfolio/
