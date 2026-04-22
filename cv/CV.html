@@ -160,19 +160,29 @@ ul li {
 }
 
 @media print {
-  body { margin: 20px auto; max-width: 100%; }
-  .container { 
-    display: flex; 
-    gap: 30px; 
+  body { margin: 0; padding: 20px; }
+  
+  .container {
+    display: table;
+    width: 100%;
   }
-  .sidebar { 
-    width: 200px; 
-    flex-shrink: 0; 
+
+  .sidebar {
+    display: table-cell;
+    width: 30%;
+    vertical-align: top;
   }
-  .main { 
-    flex: 1; 
-    min-width: 0;
+
+  .main {
+    display: table-cell;
+    width: 70%;
+    vertical-align: top;
   }
+
+  * {
+    box-sizing: border-box;
+  }
+
   .section { 
     margin-bottom: 16px; 
   }
@@ -388,7 +398,7 @@ ul li {
           <div class="bold">Computer Vision Engineer</div>
           <div class="small">Oct 2025 – Present</div>
         </div>
-        <div class="small">Industrial · Attar Industrial Area, Karachi</div>
+        <div class="small">Industrial · Attar Industrial Area, KPK</div>
         <ul class="small">
           <li>Designed and deployed <span class="metrics">real-time computer vision systems</span> for industrial monitoring and security applications</li>
           <li>Built multi-camera surveillance pipeline processing <span class="metrics">20+ RTSP streams</span> concurrently with threaded architecture</li>
